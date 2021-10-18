@@ -1,0 +1,11 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.TcHmiNumericInputExtended.TcHmiNumericInputExtendedControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "TcHmiNumericInputExtendedControl",
+      "frameworkControlNamespace": "TcHmi.Controls.TcHmiNumericInputExtended"
+    }
+  }
+}

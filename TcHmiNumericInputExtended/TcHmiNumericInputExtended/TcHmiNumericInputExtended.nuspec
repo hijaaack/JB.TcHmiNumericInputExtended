@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>JB.TcHmiNumericInputExtended</id>
+    <version>1.0.0</version>
+    <description>Extended TcHmiNumericInput control with .onEnterPressed event.</description>
+    <authors>Jack Borelius</authors>
+    <title>TcHmiNumericInputExtended</title>
+    <owners>Jack Borelius</owners>
+    <projectUrl>https://github.com/hijaaack/JB.TcHmiNumericInputExtended</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>TwinCAT HMI</tags>
+    <license type="expression">MIT</license>
+    <icon>images/logo.png</icon>
+    <dependencies>
+      <group targetFramework="native1.12-tchmi">
+        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="12.750.1" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="12.750.1" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="**\*" target="runtimes\native1.12-tchmi\" exclude=".eslintrc.json;**\*.nuspec;**\*.tpl.json;**\*.hmi*proj;**\~*;**\*.tmp;**\tmp*;**\*.user;**\tsconfig.json;**\*.log;**\*.bak;**\obj\**\*;packages.config;packages.xsd;.hmiframework\**\*;.hmipkgs\**\*;.git;.gitignore;.gitattributes" />
+    <file src="images\logo.png" target="images\" />
+  </files>
+</package>
