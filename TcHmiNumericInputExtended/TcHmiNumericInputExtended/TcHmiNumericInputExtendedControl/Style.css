@@ -13,10 +13,14 @@
     width: 100%;
     height: 100%;
     border-radius: inherit;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .TcHmi_Controls_Beckhoff_TcHmiNumericInput-template-input {
-    background: transparent;
     font-family: inherit;
     font-size: inherit;
     font-style: inherit;
@@ -34,14 +38,24 @@
     outline: none;
     resize: none;
     cursor: text;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
     border-radius: inherit;
 }
+
+.TcHmi_Controls_Beckhoff_TcHmiNumericInput-template-unitbox {
+    position: absolute;
+    background: none;
+    border: none;
+    align-self: center;
+    padding: 2px;
+    margin-right: 1px;
+    right: 5px;
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiNumericInput-template-unitbox::before {
+        content: attr(data-label);
+    }
 
 
 /* The main use for this control is interaction. So mark when this is not allowed. */

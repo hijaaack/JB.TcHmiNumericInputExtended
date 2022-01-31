@@ -5,10 +5,10 @@
   "namespace": "TcHmi.Controls.TcHmiNumericInputExtended",
   "displayName": "TcHmiNumericInputExtended",
   "version": {
-    "full": "1.0.0.0",
+    "full": "1.0.1.0",
     "major": 1,
     "minor": 0,
-    "revision": 0,
+    "revision": 1,
     "build": 0
   },
   "visible": true,
@@ -19,7 +19,7 @@
     "containerControl": false,
     "geometry": {
       "width": 150,
-      "height": 50
+      "height": 25
     }
   },
   "template": "Template.html",
@@ -78,8 +78,43 @@
     }
   },
   "attributes": [
+    {
+      "name": "data-tchmi-numericinputextended-unit",
+      "displayName": "UnitText",
+      "propertyName": "UnitText",
+      "propertySetterName": "setUnitText",
+      "propertyGetterName": "getUnitText",
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "Common",
+      "description": "Unit text.",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": false,
+      "defaultValue": "",
+      "defaultValueInternal": ""
+    },
+    {
+      "name": "data-tchmi-numericinputextended-unit-fontsize",
+      "displayName": "UnitTextFontSize",
+      "propertyName": "UnitTextFontSize",
+      "propertySetterName": "setUnitTextFontSize",
+      "propertyGetterName": "getUnitTextFontSize",
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "Common",
+      "description": "Unit Text Font Size",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": false,
+      "defaultValue": 12,
+      "defaultValueInternal": 12
+    }
   ],
-  "attributeCategories": [],
+  "attributeCategories": [
+  ],
   "functions": [],
   "events": [
     {

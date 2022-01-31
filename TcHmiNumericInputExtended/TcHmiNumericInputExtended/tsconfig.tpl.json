@@ -26,7 +26,8 @@
     "alwaysStrict": false
   },
   "include": [
-    "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts"    
+    "$(Beckhoff.TwinCAT.HMI.Framework).InstallPath/TcHmi.d.ts",
+    "$(Beckhoff.TwinCAT.HMI.Controls).InstallPath/TcHmiNumericInput.d.ts"
   ],
   "files": [
     "TcHmiNumericInputExtendedControl/TcHmiNumericInputExtendedControl.ts"

@@ -19,7 +19,7 @@
     <ProjectName>TcHmiNumericInputExtended</ProjectName>
     <Name>TcHmiNumericInputExtended</Name>
     <HmiInitial>1.12.750.1</HmiInitial>
-    <HmiRecent>1.12.750.1</HmiRecent>
+    <HmiRecent>1.12.752.0</HmiRecent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|TwinCAT HMI' ">
     <PlatformTarget>TwinCAT HMI</PlatformTarget>
@@ -30,9 +30,10 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TypeScriptToolsVersion>3.9</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
     <TypeScriptShowVersionWarning>false</TypeScriptShowVersionWarning>
     <DefaultNamespace>TcHmiNumericInputExtended</DefaultNamespace>
+    <TypeScriptBuildMode>False</TypeScriptBuildMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|TwinCAT HMI' ">
     <PlatformTarget>TwinCAT HMI</PlatformTarget>
@@ -57,6 +58,9 @@
   <Import Project="$(TwinCATHmi_Targets)" />
   <ItemGroup>
     <Content Include="Images\logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="packages.config">
       <SubType>Content</SubType>
     </Content>
     <Content Include="TcHmiNumericInputExtendedControl\Icons\16x16.png">
@@ -92,10 +96,6 @@
     <Content Include="TcHmiNumericInputExtendedControl\Style.css" />
     <Content Include="TcHmiNumericInputExtendedControl\Description.json" />
     <Content Include="TcHmiNumericInputExtendedControl\Schema\Types.Schema.json" />
-    <Content Include="packages.config">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
     <Content Include="packages.xsd">
       <SubType>Content</SubType>
       <Visible>false</Visible>

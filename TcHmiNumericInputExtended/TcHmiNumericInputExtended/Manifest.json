@@ -14,8 +14,8 @@
   "provideMetadata": {
     "toolbox": {
       "TcHmiNumericInputExtended": {
-        "1632": "JB: Controls",
-        "200": "TcHmiNumericInputExtended"
+        "200": "TcHmiNumericInputExtended",
+        "1632": "JB: Controls"
       }
     }
   },

@@ -4,6 +4,9 @@ declare module TcHmi {
     module Controls {
         module TcHmiNumericInputExtended {
             class TcHmiNumericInputExtendedControl extends TcHmi.Controls.Beckhoff.TcHmiNumericInput {
+                protected __unitText: string | null;
+                protected __unitTextFontSize: number | null;
+                protected __elementUnitText: JQuery;
                 /**
                  * Constructor of the control
                  * @param {JQuery} element Element from HTML (internal, do not use)
@@ -37,6 +40,10 @@ declare module TcHmi {
                 * Will be called automatically if system destroys control!
                 */
                 destroy(): void;
+                getUnitTextFontSize(): number | null;
+                setUnitTextFontSize(valueNew: number | null): void;
+                getUnitText(): string | null;
+                setUnitText(valueNew: string | null): void;
                 /**
                 * Processes the Key down handler.
                 * @function

@@ -21,6 +21,10 @@ module TcHmi {
                 - Attention: If we have a Server Binding on an Attribute the setter will be called once with null to initialize and later with the correct value.
                 */
 
+                protected __unitText: string | null;
+                protected __unitTextFontSize: number | null;
+                protected __elementUnitText!: JQuery;
+
                 /**
                  * Constructor of the control
                  * @param {JQuery} element Element from HTML (internal, do not use)
@@ -40,6 +44,8 @@ module TcHmi {
                 public __previnit() {
                     // Call __previnit of base class
                     super.__previnit();
+
+                    this.__elementUnitText = this.__element.find('.TcHmi_Controls_Beckhoff_TcHmiNumericInput-template-unitbox');
                 }
                 /** 
                  * Is called during control initialize phase after attribute setter have been called based on it's default or initial html dom values. 
@@ -100,6 +106,60 @@ module TcHmi {
                     */
                 }
 
+                getUnitTextFontSize(): number | null {
+                    return this.__unitTextFontSize;
+                }
+
+                public setUnitTextFontSize(valueNew: number | null) {
+                    //convert the new value
+                    let convertedValue = TcHmi.ValueConverter.toNumber(valueNew);
+
+                    //if converted value is null, get internal default
+                    if (convertedValue === null) {
+                        convertedValue = this.getAttributeDefaultValueInternal("UnitTextFontSize");
+                    }
+
+                    if (tchmi_equal(this.__unitTextFontSize, convertedValue))
+                        return;
+
+                    //save the new value
+                    this.__unitTextFontSize = convertedValue;
+
+                    //Inform the system that the function has a changed result
+                    TcHmi.EventProvider.raise(this.__id + ".onFunctionResultChanged", ["getUnitTextFontSize"]);
+
+                    // @ts-ignore
+                    $(this.__elementUnitText).css("font-size", this.__unitTextFontSize + "pt");
+                }
+
+
+                getUnitText(): string | null {
+                    return this.__unitText;
+                }
+
+                public setUnitText(valueNew: string | null) {
+                    //convert the new value
+                    let convertedValue = TcHmi.ValueConverter.toString(valueNew);
+
+                    //if converted value is null, get internal default
+                    if (convertedValue === null) {
+                        convertedValue = this.getAttributeDefaultValueInternal("UnitText");
+                    }
+
+                    if (tchmi_equal(this.__unitText, convertedValue))
+                        return;
+
+                    //save the new value
+                    this.__unitText = convertedValue;
+
+                    //Inform the system that the function has a changed result
+                    TcHmi.EventProvider.raise(this.__id + ".onFunctionResultChanged", ["getUnitText"]);
+                   
+                    //@ts-ignore
+                    $(this.__elementUnitText).attr("data-label", this.__unitText);
+                }
+
+
                 /**
                 * Processes the Key down handler.
                 * @function
@@ -119,4 +179,4 @@ module TcHmi {
 /**
 * Register Control
 */
-TcHmi.Controls.registerEx('TcHmiNumericInputExtendedControl', 'TcHmi.Controls.TcHmiNumericInputExtended', TcHmi.Controls.TcHmiNumericInputExtended.TcHmiNumericInputExtendedControl);
+TcHmi.Controls.registerEx('TcHmiNumericInputExtended', 'TcHmi.Controls.TcHmiNumericInputExtended', TcHmi.Controls.TcHmiNumericInputExtended.TcHmiNumericInputExtendedControl);
