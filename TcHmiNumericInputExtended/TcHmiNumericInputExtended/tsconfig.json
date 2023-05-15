@@ -1,33 +1,28 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
-  "compilerOptions": {
-    "module": "none",
-    "target": "es6",
-    "skipLibCheck": true,
-    "lib": [
-      "dom",
-      "scripthost",
-      "es6",
-      "es2017.intl"
-    ],
-    "types": [],
-    "declaration": true,
-    "sourceMap": true,
-    "noEmitOnError": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictBindCallApply": true,
-    "strictNullChecks": true,
-    "noImplicitReturns": true,
-    "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
-  },
+    "compilerOptions": {
+        "module": "none",
+        "target": "ES2020",
+        "skipLibCheck": true,
+        "lib": [ "DOM", "DOM.Iterable", "ES2019", "ES2020.BigInt" ],
+        "types": [],
+        "declaration": true,
+        "sourceMap": true,
+        "noEmitOnError": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictBindCallApply": true,
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
+        "strictFunctionTypes": false,
+        "strictPropertyInitialization": false,
+        "alwaysStrict": false
+    },
   "include": [
-    "../Packages/Beckhoff.TwinCAT.HMI.Framework.12.752.0/runtimes/native1.12-tchmi/TcHmi.d.ts",
-    "../Packages/Beckhoff.TwinCAT.HMI.Controls.12.752.0/runtimes/native1.12-tchmi/TcHmiNumericInput.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.37/runtimes/native1.12-tchmi/TcHmi.d.ts",
+    "../Packages/Beckhoff.TwinCAT.HMI.Controls.12.760.37/runtimes/native1.12-tchmi/TcHmiNumericInput.d.ts"
   ],
   "files": [
     "TcHmiNumericInputExtendedControl/TcHmiNumericInputExtendedControl.ts"
